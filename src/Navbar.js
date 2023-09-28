@@ -4,39 +4,39 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">DG.</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">DG.</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <Link to='/markup'>
-        <li class="nav-item">
-          <a class="nav-link active"  aria-current="page"  style={{ textDecoration: 'none'  }} >Markup</a>
+        <li className="nav-item">
+          <a className="nav-link active"  aria-current="page"  style={{ textDecoration: 'none'  }} >Markup</a>
         </li>
         </Link>
         <Link to='/dishcost'>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"> Dish Cost</a>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#"> Dish Cost</a>
         </li>
         </Link>
         <Link to='/conversion'>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"> Conversion</a>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#"> Conversion</a>
         </li>
         </Link>
         <Link to='/nutrition'>
-        <li class="nav-item">
-          <a class="nav-link active"  aria-current="page"  style={{ textDecoration: 'none'  }} >Nutrition</a>
+        <li className="nav-item">
+          <a className="nav-link active"  aria-current="page"  style={{ textDecoration: 'none'  }} >Nutrition</a>
         </li>
         </Link>
       </ul>
-      <form class="d-flex">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"></a>
+      <form className="d-flex">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#"></a>
         </li>
         </ul>
       </form>
