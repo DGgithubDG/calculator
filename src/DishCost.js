@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 function DishCost() {
   return (
-    <div>DishCost</div>
+    <div>
+      <Navbar />
+      <h1 className='text-center'>DishCost</h1>
+      <Footer />
+      </div>
   )
 }
 
