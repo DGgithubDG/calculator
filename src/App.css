@@ -57,13 +57,12 @@
     transform: translateY(100%);
   }
 }
-.home-container {
-  position: relative;
-  width: 100%;
-  max-height: 20vh; /* Ensure the container covers the entire viewport */
-  background-color: #282c34; /* Set a background color */
-  overflow: hidden; /* Hide overflowing stars */
+.custom-toggler-icon {
+  background-color: rgb(106, 106, 106); /* Set the background color for the hamburger menu icon */
+  color: rgb(255, 255, 255); /* Set the color of the hamburger menu icon */
+  border-radius: 4px; /* Optional: Add rounded corners to the icon */
 }
+
 .back{
   position: relative;
   width: 100%;
