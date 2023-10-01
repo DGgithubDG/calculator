@@ -1,12 +1,17 @@
 import React from 'react'
 
 function Footer() {
+  const gifUrl = 'https://64.media.tumblr.com/c90100fd260e77796e397f07d1771d34/fd850e41fad78fd6-86/s400x600/f15e520227c7dd8b471d729a48f26080712d8250.gifv';
+
+  const backgroundImageStyle = {
+    backgroundImage: `url(${gifUrl})`, // Set the background image URL
+  };
   return (
     <div>
-        <footer className="bg-light text-center text-lg-start">
-  <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        <footer className="bg-light text-center text-lg-start" style={backgroundImageStyle}>
+  <div className="text-center p-3" style={{  color: 'white' }}>
     © 2023 Copyright: DG.
-    <a className="text-dark" href="https://denisng.netlify.com/">About Me</a>
+    <a className="text-light" href="https://denisng.netlify.com/" >About Me</a>
   </div>
 </footer>
     </div>

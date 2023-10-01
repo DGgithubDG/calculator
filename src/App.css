@@ -70,5 +70,13 @@
   overflow: hidden; /* Hide overflowing stars */
 }
 .g{
-  padding-bottom: 100px;
+  padding-bottom: 600px;
+}
+
+.markuppadbot{
+  padding-bottom: 80px;
+}
+
+.hover-text:hover {
+  color: rgb(159, 22, 166);
 }

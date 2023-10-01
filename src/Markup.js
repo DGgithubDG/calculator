@@ -11,6 +11,11 @@ function Markup() {
   const [menuPrice, setMenuPrice] = useState('');
   const [grossProfit, setGrossProfit] = useState('');
   const [error, setError] = useState('');
+  const gifUrl = 'https://64.media.tumblr.com/c90100fd260e77796e397f07d1771d34/fd850e41fad78fd6-86/s400x600/f15e520227c7dd8b471d729a48f26080712d8250.gifv';
+
+  const backgroundImageStyle = {
+    backgroundImage: `url(${gifUrl})`, // Set the background image URL
+  };
 
   // Calculate menu price and gross profit when inputs change
   const calculateProfit = () => {
@@ -54,11 +59,11 @@ function Markup() {
   }, []);
 
   return (
-    <div>
+    <div style={backgroundImageStyle}>
       <Navbar />
-      <h1 className='text-center'>Selling Cost Page</h1>
+      <h1 className='text-center' style={{color: "white"}} >Selling Cost Page</h1>
 
-      <div className="container">
+      <div className="markuppadbot container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-6">
             <div className="card">
