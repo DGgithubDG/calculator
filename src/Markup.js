@@ -137,7 +137,7 @@ function Markup() {
                 </li>
                 <li className="list-group-item text-center">
                   <button
-                    className="btn btn-secondary"
+                    className="btn btn-primary"
                     onClick={calculateProfit}
                     style={{ width: "60%" }}
                   >

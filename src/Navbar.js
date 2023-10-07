@@ -27,9 +27,10 @@ function Navbar() {
 </a>
         </li>
         </Link>
-        <Link to='/dishcost'style={{ textDecoration: 'none'  }}>
+        <Link to='/commission'style={{ textDecoration: 'none'  }}>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#" style={{  color: 'white' }} > <span className="hover-text"> Dish Cost</span></a>
+          <a className="nav-link active" aria-current="page" href="#" style={{  color: 'white' }} > <span className="hover-text"> Commission 
+          </span></a>
         </li>
         </Link>
         <Link to='/conversion'style={{ textDecoration: 'none'  }}>
@@ -39,7 +40,7 @@ function Navbar() {
         </Link>
         <Link to='/nutrition'style={{ textDecoration: 'none'  }}>
         <li className="nav-item">
-          <a className="nav-link active"  aria-current="page"  style={{  color: 'white' }} ><span className="hover-text"> Nutrition</span></a>
+          <a className="nav-link active"  aria-current="page"  style={{  color: 'white' }} ><span className="hover-text"> Gross Profit</span></a>
         </li>
         </Link>
       </ul>

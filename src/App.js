@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MarkupCalc from './Markup';
 import Nutrition from './Nutrition';
-import DishCost from './DishCost';
 import Conversion from './Conversion';
 import Home from './Home';
+import Commission from './Commission';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Route path='/' element={<Home />} />
         <Route path='/markup' element={<MarkupCalc />} />
         <Route path='/nutrition' element={<Nutrition />} />
-        <Route path='/dishcost' element={<DishCost />} />
+        <Route path='/commission' element={<Commission />} />
         <Route path='/conversion' element={<Conversion />} />
 
       </Routes>
