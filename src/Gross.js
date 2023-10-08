@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-function Nutrition() {
+function Gross() {
   const gifUrl = 'https://64.media.tumblr.com/c90100fd260e77796e397f07d1771d34/fd850e41fad78fd6-86/s400x600/f15e520227c7dd8b471d729a48f26080712d8250.gifv';
 
   const [revenue, setRevenue] = useState(0);
@@ -77,4 +77,4 @@ function Nutrition() {
   );
 }
 
-export default Nutrition;
+export default Gross;

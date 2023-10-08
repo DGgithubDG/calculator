@@ -80,3 +80,8 @@
 .hover-text:hover {
   color: rgb(159, 22, 166);
 }
+
+.commissionbtn{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
