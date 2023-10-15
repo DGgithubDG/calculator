@@ -14,7 +14,9 @@ function Home() {
     <div >
       <div className="background" style={backgroundImageStyle}>
       <Navbar />
-      <h1> <div className=' g text-center' style={{color: 'white'}}>Home</div></h1>
+      <h1> <div className=' g text-center' style={{color: 'white'}}>Home
+      <h5> <div className=' g text-center' style={{color: 'white'}}>In this page the S&P 500 companies and their share prices will be displayed</div></h5>
+      </div></h1>
       <Footer />
 
       </div>

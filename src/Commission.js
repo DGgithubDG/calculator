@@ -31,7 +31,7 @@ function Commission() {
     <div className='' style={backgroundImageStyle}>
       <Navbar />
       <h1 className='text-center' style={{ color: 'white' }}>Commission Calculator</h1>
-      <div className="container mt-5">
+      <div className="g container mt-5">
         <div className="row">
           <div className="col-md-6 offset-md-3">
             <form>

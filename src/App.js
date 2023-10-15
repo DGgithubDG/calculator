@@ -5,6 +5,7 @@ import Nutrition from './Gross';
 import Conversion from './Conversion';
 import Home from './Home';
 import Commission from './Commission';
+import CurrencyInput from './CurrencyInput';
 
 
 function App() {
