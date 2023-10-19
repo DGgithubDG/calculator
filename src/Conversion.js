@@ -52,7 +52,7 @@ function Conversion() {
   }
 
   return (
-    <div className="container-fluid p-0" style={backgroundImageStyle}>
+    <div className="g container-fluid p-0" style={backgroundImageStyle}>
     <Navbar />
     <div className="container mt-5">
       <h1 className="text-center text-white">Conversion</h1>

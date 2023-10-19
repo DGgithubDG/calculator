@@ -21,28 +21,25 @@ function Navbar() {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <Link to='/markup'style={{ textDecoration: 'none'  }}>
-        <li className="nav-item">
-        <a className="hover nav-link active" aria-current="page" style={{  color: 'white' }}>    <span className="hover-text"> Markup</span>
-</a>
-        </li>
-        </Link>
-        <Link to='/commission'style={{ textDecoration: 'none'  }}>
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#" style={{  color: 'white' }} > <span className="hover-text"> Commission 
-          </span></a>
-        </li>
-        </Link>
+
+
         <Link to='/conversion'style={{ textDecoration: 'none'  }}>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="#" style={{  color: 'white' }}> <span className="hover-text"> Conversion</span></a>
         </li>
         </Link>
-        <Link to='/nutrition'style={{ textDecoration: 'none'  }}>
-        <li className="nav-item">
-          <a className="nav-link active"  aria-current="page"  style={{  color: 'white' }} ><span className="hover-text"> Gross Profit</span></a>
+    
+        <li class="nav-item dropdown" style={{color: 'white'}}>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: 'white'}}>
+            Calculators
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link to='/nutrition'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Gross Profit</span></a></li></Link>
+          <Link to='/commision'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Commission</span></a></li></Link>
+            <li><hr class="dropdown-divider"/></li>
+            <Link to='/markup'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Markup</span></a></li></Link>
+            </ul>
         </li>
-        </Link>
       </ul>
       <form className="d-flex">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
