@@ -6,6 +6,7 @@ import Conversion from './Conversion';
 import Home from './Home';
 import Commission from './Commission';
 import CurrencyInput from './CurrencyInput';
+import CompoundInterest from './CompoundInterest';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path='/nutrition' element={<Nutrition />} />
         <Route path='/commission' element={<Commission />} />
         <Route path='/conversion' element={<Conversion />} />
+        <Route path='/compoundinterest' element={<CompoundInterest />} />
+
 
       </Routes>
     </BrowserRouter>

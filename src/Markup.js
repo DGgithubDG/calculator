@@ -23,7 +23,7 @@ function Markup() {
     const marginDecimal = parseFloat(margin) / 100;
 
     // Calculate the total cost
-    const totalCost = parseFloat(costOfFood) + parseFloat(garnishCost) + parseFloat(extraCost);
+    const totalCost = parseFloat(costOfFood) ;
 
     // Calculate the menu price by adding the profit margin
     const menuPriceValue = totalCost * (1 + marginDecimal);
@@ -31,7 +31,7 @@ function Markup() {
     // Calculate gross profit
     const grossProfitValue = menuPriceValue - totalCost;
 
-    if (!costOfFood || !garnishCost || !extraCost || !margin) {
+    if (!costOfFood ||  !margin) {
       setError('Some fields are empty.');
       return;
     }
@@ -61,7 +61,7 @@ function Markup() {
   return (
     <div style={backgroundImageStyle}>
       <Navbar />
-      <h1 className='text-center' style={{color: "white"}} >Selling Cost Page</h1>
+      {/* <h1 className='text-center' style={{color: "white"}} >Selling Cost Page</h1> */}
 
       <div className="markuppadbot container">
         <div className="row justify-content-center">
@@ -74,7 +74,7 @@ function Markup() {
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
-                      <p>Cost Of Food</p>
+                      <p>Total Cost </p>
                     </div>
                     <div className="col text-end">
                       <input
@@ -87,38 +87,7 @@ function Markup() {
                     </div>
                   </div>
                 </li>
-                <li className="list-group-item">
-                  <div className="row">
-                    <div className="col">
-                      <p>Garnish Cost</p>
-                    </div>
-                    <div className="col text-end">
-                      <input
-                        type="number"
-                        placeholder='0.00'
-                        value={garnishCost}
-                        onChange={(e) => setGarnishCost(e.target.value)}
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li className="list-group-item">
-                  <div className="row">
-                    <div className="col">
-                      <p>Extra Cost</p>
-                    </div>
-                    <div className="col text-end">
-                      <input
-                        type="number"
-                        placeholder='0.00'
-                        value={extraCost}
-                        onChange={(e) => setExtraCost(e.target.value)}
-                        className="form-control"
-                      />
-                    </div>
-                  </div>
-                </li>
+     
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
@@ -148,7 +117,7 @@ function Markup() {
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
-                      <p>Menu Price</p>
+                      <p>Final Price</p>
                     </div>
                     <div className="col text-end">
                       {menuPrice}

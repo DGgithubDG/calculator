@@ -29,15 +29,17 @@ function Navbar() {
         </li>
         </Link>
     
-        <li class="nav-item dropdown" style={{color: 'white'}}>
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: 'white'}}>
-            Calculators
+        <li class=" nav-item dropdown " style={{color: 'white'}}>
+          <a class="hover-text nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: 'white'}}>
+          <span className="hover-text"> Calculators</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <Link to='/nutrition'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Gross Profit</span></a></li></Link>
-          <Link to='/commision'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Commission</span></a></li></Link>
+          <Link to='/Commission'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Commission</span></a></li></Link>
             <li><hr class="dropdown-divider"/></li>
             <Link to='/markup'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Markup</span></a></li></Link>
+            <Link to='/compoundinterest'style={{ textDecoration: 'none'  }}> <li><a class="dropdown-item" aria-current="page"   ><span className="hover-text"> Compound Interest</span></a></li></Link>
+
             </ul>
         </li>
       </ul>
