@@ -70,7 +70,11 @@
   overflow: hidden; /* Hide overflowing stars */
 }
 .g{
-  padding-bottom: 600px;
+  padding-bottom: 450px;
+}
+
+.gg{
+  padding-bottom: 650px;
 }
 
 .markuppadbot{
@@ -83,6 +87,12 @@
 
 .hover-text:hover {
   color: rgb(159, 22, 166);
+  font-size: 16.6px;
+}
+
+.hoverr-text:hover {
+  color: rgb(159, 22, 166);
+  font-size: 20.7px;
 }
 
 .commissionbtn{
@@ -92,4 +102,17 @@
 .padtopbot{
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.no-horizontal-scroll {
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }

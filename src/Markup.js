@@ -65,7 +65,7 @@ function Markup() {
 
       <div className="markuppadbot container">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-6">
+          <div className="g col-12 col-md-6">
             <div className="card">
               <div className="card-header">
                 <h5 className='text-center'><b>Markup Calculator</b></h5>

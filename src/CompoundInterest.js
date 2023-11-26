@@ -55,7 +55,7 @@ function CompoundInterestCalculator() {
       {/* <h1 className='text-center' style={{ color: 'white' }}>Compound Interest Calculator</h1> */}
 
       <div className="markuppadbot container">
-        <div className="row justify-content-center">
+        <div className="g row justify-content-center">
           <div className="col-12 col-md-6">
             <div className="card">
               <div className="card-header">

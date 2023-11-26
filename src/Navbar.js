@@ -13,7 +13,7 @@ function Navbar() {
   <div className="container-fluid">
   <Link to="/" style={{ textDecoration: 'none' }}>
   <a className="navbar-brand" href="#" style={{ color: 'white' }}>
-    <span className="hover-text">DG.</span>
+    <span className="hoverr-text">DG.</span>
   </a>
 </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

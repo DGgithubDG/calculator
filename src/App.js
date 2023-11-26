@@ -7,7 +7,7 @@ import Home from './Home';
 import Commission from './Commission';
 import CurrencyInput from './CurrencyInput';
 import CompoundInterest from './CompoundInterest';
-
+import MouseTracker from './MouseTracker';
 
 function App() {
   return(
@@ -19,6 +19,8 @@ function App() {
         <Route path='/commission' element={<Commission />} />
         <Route path='/conversion' element={<Conversion />} />
         <Route path='/compoundinterest' element={<CompoundInterest />} />
+        <Route path='/mousetracker' element={<MouseTracker />} />
+
 
 
       </Routes>

@@ -40,12 +40,44 @@ function Conversion() {
     backgroundImage: `url(${gifUrl})`,
   };
 
+  useEffect(() => {
+    const disableHorizontalScroll = (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        const touchStartX = touch.clientX;
+        const touchStartY = touch.clientY;
+  
+        const handleTouchMove = (e) => {
+          const deltaX = touchStartX - e.touches[0].clientX;
+          const deltaY = touchStartY - e.touches[0].clientY;
+  
+          if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            e.preventDefault();
+          }
+        };
+  
+        document.addEventListener('touchmove', handleTouchMove, { passive: false });
+  
+        document.addEventListener('touchend', () => {
+          document.removeEventListener('touchmove', handleTouchMove);
+        }, { once: true });
+      }
+    };
+  
+    document.addEventListener('touchstart', disableHorizontalScroll, { passive: false });
+  
+    return () => {
+      document.removeEventListener('touchstart', disableHorizontalScroll);
+    };
+  }, []);
+  
+
   return (
     <div style={backgroundImageStyle}>
       <Navbar />
-      <div className="App" style={{ color: 'white' }}>
+      <div className="App no-horizontal-scroll" style={{ color: 'white' }}>
         <h1 className='conversionpadbot'>Currency Conversion</h1>
-        <div className='g'>
+        <div className='gg'>
           <div className="row">
             <div className="col d-flex justify-content-center">
               <div class="input-group mb-3" style={{ width: '40%' }}>
