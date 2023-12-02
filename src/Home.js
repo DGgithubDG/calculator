@@ -19,8 +19,17 @@ function Home() {
 
   const isMarketOpen = () => {
     const currentTime = getCurrentGMTTime();
+    const currentDay = new Date().getUTCDay();
+  
+    // Check if it's a weekend (Saturday or Sunday)
+    if (currentDay === 0 /* Sunday */ || currentDay === 6 /* Saturday */) {
+      return false;
+    }
+  
+    // Check if it's within market hours on weekdays
     return currentTime >= 1430 && currentTime <= 2100;
   };
+  
 
   return (
     <div>
@@ -28,16 +37,16 @@ function Home() {
         <Navbar />
         <h1>
           <div className='text-center' style={{ color: 'white' }}>
-            Home
+            
             {isMarketOpen() ? (
-              <h3>Market is Open (14:30 to 21:00 GMT)</h3>
+              <h5 className='stockpadbot'>Market is Open 🟢 </h5>
             ) : (
-              <h3>Market is Closed (21:01 to 14:29 GMT)</h3>
+              <h5 className='stockpadbot'>Market is Closed 🔴 </h5>
             )}
             <h5>
-              <div className='text-center' style={{ color: 'white' }}>
+              {/* <div className='text-center' style={{ color: 'white' }}>
                 In this page, the S&P 500 companies and their share prices will be displayed
-              </div>
+              </div> */}
             </h5>
             <Stock />
             {/* <MouseTracker /> */}

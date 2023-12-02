@@ -21,50 +21,44 @@ class Stock extends React.Component {
     fetchStock() {
         const API_KEY = 'RC89KY2C1GG1PIMO';
         const pointerToThis = this;
-        console.log(pointerToThis)
-        let StockSymbol = 'AMZN'
+        console.log(pointerToThis);
+        let StockSymbol = 'AMZN';
+        // let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo`;
         let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${StockSymbol}&interval=5min&apikey=${API_KEY}`;
+
         // ` https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${StockSymbol}interval=5min&apikey=${API_KEY}`
         let stockChartXValuesFunction = [];
-        let stockChartYValuesFunction = []
-
-
-
+        let stockChartYValuesFunction = [];
+    
         fetch(API_CALL)
-            .then(
-                function (response) {
-                    return response.json();
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+    
+                for (var key in data['Time Series (5min)']) {
+                    stockChartXValuesFunction.push(key);
+                    stockChartYValuesFunction.push(data['Time Series (5min)'][key]['1. open']);
                 }
-            )
-
-            .then(
-                function (data) {
-                    console.log(data);
-
-                    for (var key in data[`Time Series (Daily)`]) {
-                        stockChartXValuesFunction.push(key);
-                        stockChartYValuesFunction.push(data[`Time Series (Daily)`]
-                        [key][`1. open`]);
-                    }
-
-                    console.log(stockChartXValuesFunction)
-                    pointerToThis.setState({
-                        stockChartXValues: stockChartXValuesFunction,
-                        stockChartYValues: stockChartYValuesFunction
-                    })
-                }
-            )
+    
+                console.log(stockChartXValuesFunction);
+                pointerToThis.setState({
+                    stockChartXValues: stockChartXValuesFunction,
+                    stockChartYValues: stockChartYValuesFunction,
+                });
+            });
     }
+    
 
 
     render() {
+        const { stockSymbol } = this.state;
         return (
             <div>
-                <h1>
-                    Stock
-                </h1>
-                <p>x value; {this.state.stockChartXValues}</p>
-                <p>x value; {this.state.stockChartYValues}</p>
+          
+                {/* <p>x value; {this.state.stockChartXValues}</p>
+                <p>Y value; {this.state.stockChartYValues}</p> */}
                 <Plot
         data={[
           {
@@ -75,7 +69,7 @@ class Stock extends React.Component {
             marker: {color: 'red'},
           },
         ]}
-        layout={{width: 720, height: 440, title: ` Share Price `}}
+        layout={{width: 720, height: 440, title: `${stockSymbol} Share Price `}}
       />
             </div>
         )
