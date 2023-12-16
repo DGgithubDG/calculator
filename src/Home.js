@@ -4,13 +4,16 @@ import Footer from './Footer';
 import './App.css';
 import MouseTracker from './MouseTracker';
 import Stock from './Stock';
+import Footerfixed from './FooterFixed';
 
 function Home() {
   const gifUrl = 'https://64.media.tumblr.com/c90100fd260e77796e397f07d1771d34/fd850e41fad78fd6-86/s400x600/f15e520227c7dd8b471d729a48f26080712d8250.gifv';
 
   const backgroundImageStyle = {
     backgroundImage: `url(${gifUrl})`, // Set the background image URL
+    minHeight: '100vh', // Set the minimum height to 100% of the viewport height
   };
+  
 
   const getCurrentGMTTime = () => {
     const now = new Date();
@@ -33,28 +36,37 @@ function Home() {
 
   return (
     <div>
-      <div className="background" style={backgroundImageStyle}>
+    <div style={backgroundImageStyle} className='home-page'>
+      <div >
         <Navbar />
         <h1>
           <div className='text-center' style={{ color: 'white' }}>
             
             {isMarketOpen() ? (
-              <h5 className='stockpadbot'>Market is Open 🟢 </h5>
+              <h3 className='stockpadbot'>Market is Open  </h3>
             ) : (
-              <h5 className='stockpadbot'>Market is Closed 🔴 </h5>
+              <h3 className='stockpadbot'>Market is Closed  </h3>
             )}
-            <h5>
-              {/* <div className='text-center' style={{ color: 'white' }}>
-                In this page, the S&P 500 companies and their share prices will be displayed
-              </div> */}
-            </h5>
+          
             <Stock />
             {/* <MouseTracker /> */}
-            <div className='gg'></div>
+            {/* <div className='' style={{ marginBottom: '3rem'}}></div> */}
+            <ul></ul>
+     
           </div>
         </h1>
-        <Footer />
       </div>
+      <Footer />
+
+    </div>
+    <div style={backgroundImageStyle} className='home-page2'>
+      <Navbar />
+<h1 className='text-center' style={{color: 'white'}}>      The data is only visible on large displays </h1>
+<ul></ul>
+<div className=' d-flex justify-content-center'><i className='text-center' style={{color: 'white'}}>* Note this is only the case for this page, all of the other pages are responsive for any device.</i>
+</div>
+      <Footerfixed />
+    </div>
     </div>
   );
 }

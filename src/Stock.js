@@ -8,10 +8,13 @@ class Stock extends React.Component {
         super(props);
         this.state = {
             stockChartXValues: [],
-            stockChartYValues: []
+            stockChartYValues: [] ,
+         
 
         }
     }
+
+ 
 
     componentDidMount() {
         this.fetchStock();
@@ -22,13 +25,18 @@ class Stock extends React.Component {
         const API_KEY = 'RC89KY2C1GG1PIMO';
         const pointerToThis = this;
         console.log(pointerToThis);
-        let StockSymbol = 'AMZN';
-        // let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo`;
-        let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${StockSymbol}&interval=5min&apikey=${API_KEY}`;
+        let StockSymbol = 'AAPL';
+        // let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&interval=5min&apikey=demo`;
+        let API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${StockSymbol}&interval=5min&outputsize=compact&apikey=${API_KEY}`;
 
         // ` https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${StockSymbol}interval=5min&apikey=${API_KEY}`
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
+
+  
+
+
+        
     
         fetch(API_CALL)
             .then(function (response) {
@@ -47,8 +55,16 @@ class Stock extends React.Component {
                     stockChartXValues: stockChartXValuesFunction,
                     stockChartYValues: stockChartYValuesFunction,
                 });
+
+
+                
             });
+           
+    
+            
     }
+
+    
     
 
 
@@ -59,18 +75,25 @@ class Stock extends React.Component {
           
                 {/* <p>x value; {this.state.stockChartXValues}</p>
                 <p>Y value; {this.state.stockChartYValues}</p> */}
+                <div className='conainer'>
                 <Plot
-        data={[
-          {
-            x: this.state.stockChartXValues,
-            y: this.state.stockChartYValues,
-            type: 'scatter',
-            mode: 'lines+markers',
-            marker: {color: 'red'},
-          },
-        ]}
-        layout={{width: 720, height: 440, title: `${stockSymbol} Share Price `}}
-      />
+  data={[
+    {
+      x: this.state.stockChartXValues,
+      y: this.state.stockChartYValues,
+      type: 'scatter',
+      mode: 'lines+markers',
+      marker: { color: 'red' },
+    },
+  ]}
+  layout={{ width: 720, height: 440, title: ` AAPL Share Price ` }}
+/>
+<ul></ul>
+
+
+      <ul></ul>
+      
+      </div>
             </div>
         )
     }

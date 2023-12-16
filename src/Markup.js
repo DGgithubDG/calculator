@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Footerfixed from './FooterFixed';
+import { FaQuestionCircle } from "react-icons/fa";
+
 
 function Markup() {
   const [costOfFood, setCostOfFood] = useState('');
@@ -58,6 +61,8 @@ function Markup() {
     };
   }, []);
 
+ 
+
   return (
     <div style={backgroundImageStyle}>
       <Navbar />
@@ -68,30 +73,83 @@ function Markup() {
           <div className="g col-12 col-md-6">
             <div className="card">
               <div className="card-header">
-                <h5 className='text-center'><b>Markup Calculator</b></h5>
+                <h5 className='text-center'><b>Markup Calculator </b></h5>
               </div>
+
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
-                      <p>Total Cost </p>
+                      <h6>Total Cost <FaQuestionCircle className='padbot' data-bs-toggle="modal" data-bs-target="#grossProfit" /> </h6>
+                      
+
+{/*Modal */}
+{/*Modal total cost  */}
+
+                      <div class="modal fade" id="grossProfit" tabindex="-1" aria-labelledby="grossProfitLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="grossProfitLabel"> total cost </h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Total amount it cost you to obtain your product in its final form.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+{/*Modal total cost */}
+
+{/*Modal desired margin*/}
+
+<div class="modal fade" id="desiredMargin" tabindex="-1" aria-labelledby="desiredMarginLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="desiredMarginLabel"> desired margin </h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Measure the % you want to make when you sell your product.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+{/*Modal desired margin */}
+
+{/*Modal */}
+
                     </div>
+                    
                     <div className="col text-end">
+                      
                       <input
                         type="number"
                         placeholder='0.00'
                         value={costOfFood}
                         onChange={(e) => setCostOfFood(e.target.value)}
                         className="form-control"
+                        
                       />
+                      
                     </div>
+        
                   </div>
                 </li>
      
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
-                      <p>Desired Margin %</p>
+                      <h6>Desired Margin % <FaQuestionCircle className='padbot' data-bs-toggle="modal" data-bs-target="#desiredMargin" /></h6>
                     </div>
                     <div className="col text-end">
                       <input
@@ -117,7 +175,7 @@ function Markup() {
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col">
-                      <p>Final Price</p>
+                      <h6>Final Price</h6>
                     </div>
                     <div className="col text-end">
                       {menuPrice}
@@ -127,7 +185,7 @@ function Markup() {
                 <li className="list-group-item">
                   <div className='row'>
                     <div className='col'>
-                      <p>Gross Profit</p>
+                      <h6>Gross Profit</h6>
                     </div>
                     <div className='col text-end'>
                       {grossProfit}
@@ -136,10 +194,12 @@ function Markup() {
                 </li>
               </ul>
             </div>
+            <ul></ul>
+            <h6 className='text-center' style={{color: 'white'}}>This Mark-Up calculator works out the profit margin an individual will obtain based on their desired margin</h6>
           </div>
         </div>
       </div>
-      <Footer />
+      <Footerfixed className="fixed-footer" />
     </div>
   );
 }
